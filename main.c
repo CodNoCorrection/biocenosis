@@ -90,7 +90,6 @@ void printArr(WORLD map[][SIZE]) {
 }
 
 int main() {
-    int t = 0; //тест на работу пул реквеста на clion
     static WORLD map[SIZE][SIZE];
     printf("enter the amount of grass appearing per turn >");
     int cntGrass, cntRabbit, cntTiger;
