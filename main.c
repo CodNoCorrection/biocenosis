@@ -3,7 +3,7 @@
 #include <string.h>
 #include <time.h>
 #include "struct.h"
-#define SIZE 100
+#define SIZE 10
 
 void createRabbit(int s, WORLD map[][SIZE]) {
     srand(time(NULL));
@@ -66,6 +66,29 @@ void createTiger(int s, WORLD map[][SIZE]) {
     }
 }
 
+//void behavior(WORLD map[][SIZE]) {
+//    for (int i = 0; i < SIZE; ++i) {
+//        for (int j = 0; j < SIZE; ++j) {
+//            if (!map[i][j].tHere && !map[i][j].rHere) continue;
+//            else if (map[i][j].tHere) {
+//                int a = 9;
+//            }
+//            else if (map[i][j].rHere) {
+//               
+//            }
+//        }
+//    }
+//} 
+
+void printArr(WORLD map[][SIZE]) {
+    for (int i = 0; i < SIZE; ++i) {
+        for (int j = 0; j < SIZE; ++j) {
+            printf("(%d %d %d) ", map[i][j].gHere, map[i][j].rHere, map[i][j].tHere);
+        }
+        printf("\n");
+    }
+}
+
 int main() {
     static WORLD map[SIZE][SIZE];
     printf("enter the amount of grass appearing per turn >");
@@ -78,6 +101,6 @@ int main() {
     printf("enter the amount of tigers appearing per turn >");
     scanf("%d", &cntTiger);
     createTiger(cntTiger, map);
-
+    printArr(map);
     return 0;
 }
