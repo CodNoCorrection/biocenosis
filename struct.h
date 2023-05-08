@@ -12,9 +12,10 @@ typedef struct grass {
 } GRS;
 
 typedef struct world {
+    char flag; //определяет менял ли я за этот ход данную клетку или нет
     char rHere;
     char tHere;
-    char gHere; 
+    char gHere;
     RAB rabbit, tiger;
     GRS grass;
 } WORLD;
